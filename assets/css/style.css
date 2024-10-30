@@ -1,0 +1,468 @@
+#mailster_live{
+	display: inherit;
+}
+
+#mailster-mb-live.postbox .inside{
+	padding: 0;
+	margin: 0;
+}
+
+body.mailster-oveflow-hidden{
+	overflow: hidden;
+}
+#poststuff #mailster_live .inside {
+	margin: 0;
+	padding: 0;
+}
+#poststuff #mailster_live.fullscreen .inside{
+	position: fixed;
+	left: 0;
+	z-index: 10000;
+	top: 28px;
+	right: 0;
+	bottom: 0;
+}
+#poststuff #mailster_live.paused.fullscreen .inside{
+	left: 1px;
+	top: 29px;
+	right: 1px;
+	bottom: 1px;
+}
+#poststuff #mailster_live.fullscreen .inside .mailster_live_wrap{
+	height: 100% !important;
+}
+.mailster_live_paused{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #f33;
+	color: #fff;
+	z-index: 10;
+	padding: 2px 5px;
+	text-transform: uppercase;
+	display: none;
+}
+#mailster_live.paused .mailster_live_paused{
+	display: block;
+}
+#mailster_live .mailster_live_wrap{
+	clear: both;
+	position: relative;
+}
+#mailster_live.paused .mailster_live_wrap{
+	box-shadow: 0px 0px 1px 1px rgba(255, 0, 0, 0.6);
+}
+.mailster_infowindow{
+	width: 252px;
+	height:60px;
+	border: 1px solid #aaa;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	padding: 2px;
+	background-color: #F8F8F8;
+}
+.mailster_infowindow img{
+	float: left;
+	margin-right: 10px;
+}
+.mailster_infowindow strong{
+	font-weight: normal;
+	text-transform: uppercase;
+	padding-top: 4px;
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 15px;
+	width: 180px;
+}
+.mailster_infowindow span{
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 15px;
+	width: 170px;
+}
+.mailster_live_collapse{
+	position: absolute;
+	bottom: 12px;
+	right: 20px;
+	color: #aaa;
+	z-index: 3;
+}
+ .expanded .mailster_live_collapse{
+	right: 43px;
+}
+.mailster_live_collapse-button.button-secondary{
+	position: relative;
+	border-radius:50%;
+	vertical-align: middle;
+	width: 28px;
+	height: 28px;
+	display: inline-block;
+}
+.mailster_live_collapse-button{
+	margin-left: -2px;
+	margin-top: 15px;
+	float: none;
+	transform: translateY(-6px);
+	background-image: url('data:image/svg+xml;utf8,<svg version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g fill="none"><path d="M0 0h24v24h-24Z"></path><path stroke="%23545454" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 16l4-4 -4-4"></path></g></svg>') !important;
+	background-size: 24px 24px;
+	background-position: center;
+}
+.expanded .mailster_live_collapse-button{
+	margin-left: -3px;
+	background-image: url('data:image/svg+xml;utf8,<svg version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M14,8l-4,4l4,4" stroke-linecap="round" stroke-width="1.5" stroke="%23545454" fill="none" stroke-linejoin="round"></path><path fill="none" d="M0,0h24v24h-24Z"></path></svg>') !important;
+}
+.mailster_live_collapse-button.button-secondary:hover{
+	border-color: #aaa;
+}
+.mailster_toggle_fullscreen{
+	position: absolute;
+	right: 7px;
+	z-index: 1;
+	top: 5px;
+	text-decoration: none;
+	width: 22px;
+	height: 20px;
+	display: none;
+}
+.mailster_toggle_fullscreen{
+	background-image: url('data:image/svg+xml;utf8,<svg version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke-linecap="round" stroke-width="1.5" stroke="%23545454" fill="none" stroke-linejoin="round"><path d="M19 21h-14c-1.105 0-2-.895-2-2v-14c0-1.105.895-2 2-2h14c1.105 0 2 .895 2 2v14c0 1.105-.895 2-2 2Z"></path><polyline points="14,6 18,6 18,10"></polyline><polyline points="10,18 6,18 6,14"></polyline></g><rect width="24" height="24" fill="none"></rect></svg>');
+}
+#mailster_live:hover .mailster_toggle_fullscreen, .touch #mailster_live .mailster_toggle_fullscreen{
+	display: block;
+}
+.mailster_live_map_wrap{
+	height:100%;
+	float: left;
+	position: absolute;
+	right: 0;
+	margin-right: 300px;
+	left: 0;
+	background-color: #F2F2F2;
+	z-index: 2;
+	overflow: hidden;
+
+}
+.mailster_live_wrap.expanded .mailster_live_map_wrap{
+	margin-right: 0px;
+}
+.mailster_live_map{
+	padding-right: 300px;
+	height:100%;
+	position: relative;
+}
+.mailster_live_activity_wrap{
+	width:300px;
+	height:100%;
+	float: right;
+	position: relative;
+	overflow: hidden;
+	background-color: #F8F8F8;
+}
+.mailster_live_activity{
+	width:600px;
+	height:100%;
+	position: absolute;
+	left: 0;
+}
+.mailster_live_activity header div{
+	-webkit-transition:border .25s ease;
+	-moz-transition:border .25s ease;
+	-ms-transition:border .25s ease;
+	-o-transition:,border .25s ease;
+	transition:border .25s ease;
+	cursor: pointer;
+}
+.mailster_live_activity header div:hover{
+	border-bottom-width: 4px;
+}
+.mailster_live_activity.active-opens header div{
+	opacity: 0.4;
+}
+.mailster_live_activity.active-opens header div.mailster_live_total_opens{
+	opacity:inherit;
+}
+.mailster_live_activity.active-opens ul.mailster_live_activities li{
+	display:none !important;
+}
+.mailster_live_activity.active-opens ul.mailster_live_activities li.mailster_live_type_open{
+	display:inherit !important;
+}
+
+.mailster_live_activity.active-clicks header div{
+	opacity: 0.4;
+}
+.mailster_live_activity.active-clicks header div.mailster_live_total_clicks{
+	opacity:inherit;
+}
+.mailster_live_activity.active-clicks ul.mailster_live_activities li{
+	display:none !important;
+}
+.mailster_live_activity.active-clicks ul.mailster_live_activities li.mailster_live_type_click{
+	display:inherit !important;
+}
+
+.mailster_live_activity.active-unsubscribes header div{
+	opacity: 0.4;
+}
+.mailster_live_activity.active-unsubscribes header div.mailster_live_total_unsubscribes{
+	opacity:inherit;
+}
+.mailster_live_activity.active-unsubscribes ul.mailster_live_activities li{
+	display:none !important;
+}
+.mailster_live_activity.active-unsubscribes ul.mailster_live_activities li.mailster_live_type_unsub{
+	display:inherit !important;
+}
+
+.mailster_live_activity.active-others header div{
+	opacity: 0.4;
+}
+.mailster_live_activity.active-others header div.mailster_live_total_others{
+	opacity:inherit;
+}
+.mailster_live_activity.active-others ul.mailster_live_activities li{
+	display:none !important;
+}
+.mailster_live_activity.active-others ul.mailster_live_activities li.mailster_live_type_other{
+	display:inherit !important;
+}
+.mailster_live_totals{
+	overflow: hidden;
+	clear: both;
+	float: none;
+	margin: 15px 5px 5px;
+	width: 300px;
+}
+.mailster_live_totals div{
+	float: left;
+	width: 23%;
+	height: 81px;
+	margin-left: 1%;
+	border-bottom: 2px solid #D3D6DB;
+	text-align: right;
+	padding: 3px;
+	color: #aaa;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition:width .25s ease-in-out, display .25s ease-in-out;
+	-moz-transition:width .25s ease-in-out, display .25s ease-in-out;
+	-ms-transition:width .25s ease-in-out, display .25s ease-in-out;
+	-o-transition:width .25s ease-in-out, display .25s ease-in-out;
+	transition:width .25s ease-in-out, display .25s ease-in-out;
+}
+.mailster_live_totals.count_1 div{
+	width: 96%;
+}
+.mailster_live_totals.count_2 div{
+	width: 47%;
+}
+.mailster_live_totals.count_3 div{
+	width: 31%;
+}
+.mailster_live_totals.count_4 div{
+	width: 23%;
+}
+.mailster_live_totals div span{
+	color: #333;
+	font-size: 28px;
+	display: block;
+	line-height: 1em;
+	padding-top: 20px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.mailster_live_totals div.mailster_live_total_opens{
+	border-bottom-color: #6ED421;
+}
+.mailster_live_totals div.mailster_live_total_clicks{
+	border-bottom-color: #2189D4;
+}
+.mailster_live_totals div.mailster_live_total_unsubscribes{
+	border-bottom-color: #D54E21;
+}
+.mailster_live_totals div.mailster_live_total_others{
+	border-bottom-color: #D4C521;
+}
+.mailster_live_activity ul{
+	margin: 0;
+	overflow: auto;
+	width:296px;
+	float: left;
+	margin-left: 4px;
+	border-top: 1px solid #D3D6DB;
+	border-bottom: 1px solid #D3D6DB;
+	background: #F9F9F9;
+	bottom: 42px;
+	position: absolute;
+	top: 100px;
+	padding:0;
+}
+.mailster_live_activity li{
+	overflow: hidden;
+	position: relative;
+	padding: 5px 5px 0;
+	display: block;
+	cursor: pointer;
+	transition:border-left-width .25s ease,border .25s ease,padding-right .25s ease;
+	margin: 2px 3px;
+	border: 1px solid #F1F1F1;
+	border-left-width: 2px;
+	background: #FFF;
+}
+.mailster_live_activity li:hover {
+	padding-right: 3px;
+	border-left-width: 4px;
+}
+
+.mailster_live_activity .mailster_live_activities li:hover {
+	background-color: #F1F1F1;
+}
+.mailster_live_activity li.mailster_live_type_open{
+	border-left-color: #6ED421;
+}
+.mailster_live_activity li.mailster_live_type_click{
+	border-left-color: #2189D4;
+}
+.mailster_live_activity li.mailster_live_type_unsub{
+	border-left-color: #D54E21;
+}
+.mailster_live_activity li.mailster_live_type_other{
+	border-left-color: #D4C521;
+}
+
+.mailster_live_back{
+	cursor: pointer;
+}
+.mailster_live_activity li h4{
+	font-size: 14px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	margin: 0;
+	height: 17px;
+	width: 72%;
+}
+.mailster_live_activity .mailster_live_avatar{
+	width:40px;
+	height:40px;
+	float: left;
+	margin-right: 10px;
+	margin-top: 1px;
+	background-color: #FFF;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 40px 40px;
+}
+.mailster_live_activity .mailster_live_userdetail .mailster_live_avatar{
+	float: right;
+	margin-top: 6px;
+	margin-right: 0px;
+	padding: 3px;
+	width:60px;
+	height:60px;
+	background-size: 60px 60px;
+}
+.mailster_live_activity .mailster_live_userdetail li{
+	cursor: auto;
+}
+.mailster_live_activity .mailster_live_userdetail li .mailster_live_avatar{
+	display: none;
+}
+.mailster_live_activity .mailster_live_userdetail li .mailster_live_name{
+	display: none;
+}
+.mailster_live_activity .mailster_live_userdetail h4{
+	padding-top: 2px;
+}
+.mailster_live_activity li .mailster_live_name{
+}
+.mailster_live_activity li .mailster_live_timestamp{
+	color: #aaa;
+	float: right;
+}
+
+
+.mailster_live_activity li .mailster_live_action_body{
+	color: #888;
+	display: none;
+}
+.mailster_live_activity .mailster_live_userdetail li .mailster_live_action_body{
+	padding-left: 0;
+	padding-top: 6px;
+	display: block;
+}
+.mailster_live_activity .mailster_live_userdetail{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 300px;
+	height: 100%;
+	float: right;
+	padding: 10px 6px;
+	margin-top: -74px;
+}
+.mailster_live_activity .mailster_live_userdetail header{
+	padding: 10px 4px;
+	margin-top: -20px;
+}
+.mailster_live_activity .mailster_live_userdetail ul{
+	top:110px;
+	width: 288px;
+	margin-left: 0;
+}
+.mailster_live_activity .mailster_live_userdetail h4.mailster_live_username{
+	font-size: 20px;
+	font-weight: normal;
+	margin: 0.9em 0 0;
+	line-height: 19px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 22px;
+	width: 208px;
+}
+.mailster_live_activity .mailster_live_userdetail h5.mailster_live_email{
+	font-weight: 100;
+	margin: 0;
+	padding-bottom: 12px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.mailster_live_info{
+	position: relative;
+	width: 260px;
+	padding: 260px 14px 0 26px;
+	display: none;
+	margin-top: 40px;
+}
+
+.noaction .mailster_live_info{
+	display: block;
+	z-index: 1;
+}
+.mailster_live_info.loggedout{
+	display: block;
+	padding-top:20%;
+}
+
+.mailster_live_info a{
+	text-decoration: none;
+}
+
+.mailster_live_info h4{
+	font-size: 12px;
+	font-weight: 100;
+	line-height: 1.4em;
+	text-align: center;
+	opacity: 0.8;
+}
+.mailster_live_no_api_key{
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
